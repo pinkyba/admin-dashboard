@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $guarded = [];
+    // With product factory (faker)
+    //protected $guarded = [];
+
+
+    protected $fillable = ['name', 'sku', 'description', 'price', 'quantity', 'sales'];
 }

@@ -38,8 +38,12 @@ Route::get('/download', 'ExportController@download')->name('download');
 
 Route::get('/echart_bar', 'ExportController@showEchart');
 
-
 Route::get('/google-map', 'ExportController@googleMap');
+
+Route::get('/showProduct', 'ExcelCsvController@index');
+Route::get('/export-excel', 'ExcelCsvController@exportExcel');
+Route::get('/export-csv', 'ExcelCsvController@exportCsv');
+
 
 Route::get('send-mail', function () {
     $details = [
